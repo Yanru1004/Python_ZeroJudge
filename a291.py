@@ -2,7 +2,7 @@ while True:
     try:
         pw = input()
         if pw == '':
-            continuw
+            continue
         pw = pw.strip().split(' ')
         n = int(input())
 
