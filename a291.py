@@ -1,30 +1,31 @@
 while True:
     try:
-        pw = input()
-        if pw == '':
-            continue
+        pw = input() #取得正確密碼
+        if pw == '': #跳過空行
+            continue 
         pw = pw.strip().split(' ')
-        n = int(input())
+        n = int(input()) #取得猜數字次數
 
+        #猜數字迴圈開始
         for i in range(n):
-            guess = input().strip().split(' ')
-            a = [i for i in guess]
-            b = [i for i in pw]
-            n = 0
-            for s in range(4):
-                if guess[s] == pw[s]:
-                    a[s] = 'x'
-                    b[s] = 'x'
-            
-            for s in a:
-                if s =='x':
-                    #print('x跳過')
-                    pass
-                elif s in b:
-                    n += 1
-                    b[b.index(s)] = 'x'
+            guess = input().strip().split(' ') #取得猜數字資訊
 
-            print(f'{a.count("x")}A{n}B')
+            index = [0,1,2,3]
+            #a = 0
+            b = 0
+            #計算數字及位置皆正確數量
+            print(pw,guess)
+            for x in range(4):
+                if pw[x] == guess[x]:
+                    print
+                    guess[x] = 'x'
+                    index.pop(x)
+            print(guess,index)
+            for y in index:
+                if pw[y] in guess:
+                    b += 1
+            
+            print(f'{4-len(index)}A{b}B')
         
     except:
         break
