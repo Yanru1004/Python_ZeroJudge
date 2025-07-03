@@ -3,6 +3,7 @@ while True:
     try:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         pw = input() #取得正確密碼
         if pw == '': #跳過空行
             continue 
@@ -32,6 +33,8 @@ while True:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         pw = sys.stdin.readline()[:-1]
         if pw == '':
             continue
@@ -55,6 +58,9 @@ while True:
 
             print('{}A{}B'.format(guess.count('x'),guess.count('o')))
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
