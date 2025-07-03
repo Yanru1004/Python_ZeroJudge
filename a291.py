@@ -1,5 +1,7 @@
+import sys
 while True:
     try:
+<<<<<<< Updated upstream
         pw = input() #取得正確密碼
         if pw == '': #跳過空行
             continue 
@@ -26,6 +28,30 @@ while True:
                     b += 1
             
             print(f'{4-len(index)}A{b}B')
+=======
+        pw = sys.stdin.readline()[:-1]
+        if pw == '':
+            continue
+        pw = pw.strip().split(' ')
+           
+        #猜數字次數迴圈
+        for i in range(int(sys.stdin.readline()[:-1])): #
+                        
+            b = 0
+            guess = sys.stdin.readline()[:-1].split(' ')
+                     
+            for x in range(4):
+                if pw[x] == guess[x]:
+                    guess[x] ='x'                    
+            
+            for y in range(4):
+                if guess[y] != 'x' and pw[y] in guess:
+                
+                    guess[guess.index(pw[y])] = 'o'
+            
+
+            print('{}A{}B'.format(guess.count('x'),guess.count('o')))
+>>>>>>> Stashed changes
         
     except:
         break
