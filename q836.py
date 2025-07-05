@@ -1,3 +1,6 @@
+#q836. 小心陷阱
+#2025.06.16 AC
+
 hp = int(input())
 x1,y1 = [int(n) for n in input().split()]
 x2,y2 = [int(n) for n in input().split()]

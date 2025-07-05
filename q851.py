@@ -1,3 +1,6 @@
+#q851. 空白偵測器
+#2025.06.18 AC
+
 while True:
     try:
         st = input()
