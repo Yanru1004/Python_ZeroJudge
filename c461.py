@@ -1,8 +1,9 @@
 #c461. apcs 邏輯運算子 (Logic Operators)
+#2025.12.13 AC
 
 #輸入並轉換為布林
-check = lambda n: int(n.strip())>0
-a,b,r = map(check,input().split())
+check = lambda n: bool(int(n))
+a,b,r = map(check,input().strip().split())
 
 no_ans = True
 
