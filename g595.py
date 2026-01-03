@@ -1,10 +1,11 @@
 #g595. 修補圍籬
+#2025.12.14 AC
 
 #取得圍籬寬度
 n = int(input())
 
 #取得圍籬高度
-fence = map(int,input().split())
+fence = list(map(int,input().split()))
 
 #初始化花費
 cost = 0
