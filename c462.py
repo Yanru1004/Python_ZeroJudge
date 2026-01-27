@@ -1,4 +1,5 @@
 #c462 交錯字串
+#2026.0.27 AC
 
 #讀入k值
 k = int(input())
@@ -23,30 +24,24 @@ for s in upper:
             count = 1
             stat = s
 count_list.append(count)
+
 #最長交錯統計
 max_num = 0
 num = 0
 
 for n in count_list:
-    if num == 0 and n<k:
-        continue
-    
-    elif num !=0 and n <k:
-        if num > max_num:
-            max_num = num
-        num = 0
 
+    if  n<k:
+        max_num = max([max_num,num])
+        num = 0
+  
     elif n == k:
         num += k
-
-    elif num == 0 and n>k:
-        num += k
+        max_num = max([max_num,num])
 
     elif n > k:
         num += k
-        if num > max_num:
-            max_num = num
-        num = 0
-
+        max_num = max([max_num,num])
+        num = k
 
 print(max_num)
